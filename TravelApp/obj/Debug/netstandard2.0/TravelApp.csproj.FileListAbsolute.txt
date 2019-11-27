@@ -1,0 +1,17 @@
+C:\Users\Shubham Gautam\source\repos\TravelApp\TravelApp\bin\Debug\netstandard2.0\TravelApp.deps.json
+C:\Users\Shubham Gautam\source\repos\TravelApp\TravelApp\bin\Debug\netstandard2.0\TravelApp.dll
+C:\Users\Shubham Gautam\source\repos\TravelApp\TravelApp\bin\Debug\netstandard2.0\ref\TravelApp.dll
+C:\Users\Shubham Gautam\source\repos\TravelApp\TravelApp\bin\Debug\netstandard2.0\TravelApp.pdb
+C:\Users\Shubham Gautam\source\repos\TravelApp\TravelApp\obj\Debug\netstandard2.0\TravelApp.csprojAssemblyReference.cache
+C:\Users\Shubham Gautam\source\repos\TravelApp\TravelApp\obj\Debug\netstandard2.0\App.xaml.g.cs
+C:\Users\Shubham Gautam\source\repos\TravelApp\TravelApp\obj\Debug\netstandard2.0\AppShell.xaml.g.cs
+C:\Users\Shubham Gautam\source\repos\TravelApp\TravelApp\obj\Debug\netstandard2.0\Views\AboutPage.xaml.g.cs
+C:\Users\Shubham Gautam\source\repos\TravelApp\TravelApp\obj\Debug\netstandard2.0\Views\ItemDetailPage.xaml.g.cs
+C:\Users\Shubham Gautam\source\repos\TravelApp\TravelApp\obj\Debug\netstandard2.0\Views\ItemsPage.xaml.g.cs
+C:\Users\Shubham Gautam\source\repos\TravelApp\TravelApp\obj\Debug\netstandard2.0\Views\NewItemPage.xaml.g.cs
+C:\Users\Shubham Gautam\source\repos\TravelApp\TravelApp\obj\Debug\netstandard2.0\TravelApp.AssemblyInfoInputs.cache
+C:\Users\Shubham Gautam\source\repos\TravelApp\TravelApp\obj\Debug\netstandard2.0\TravelApp.AssemblyInfo.cs
+C:\Users\Shubham Gautam\source\repos\TravelApp\TravelApp\obj\Debug\netstandard2.0\XamlC.stamp
+C:\Users\Shubham Gautam\source\repos\TravelApp\TravelApp\obj\Debug\netstandard2.0\TravelApp.dll
+C:\Users\Shubham Gautam\source\repos\TravelApp\TravelApp\obj\Debug\netstandard2.0\ref\TravelApp.dll
+C:\Users\Shubham Gautam\source\repos\TravelApp\TravelApp\obj\Debug\netstandard2.0\TravelApp.pdb

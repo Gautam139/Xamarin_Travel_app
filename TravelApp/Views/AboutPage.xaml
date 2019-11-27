@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+    
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Name="frontPage"
+             x:Class="TravelApp.Views.AboutPage"
+             xmlns:vm="clr-namespace:TravelApp.ViewModels"
+             Shell.NavBarIsVisible="False"
+             Shell.TabBarIsVisible="False"  
+             Title="{Binding Title}">
+    
+    <ContentPage.BindingContext>
+        <vm:AboutViewModel />
+    </ContentPage.BindingContext>
+
+    <ScrollView Orientation="Vertical">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="250"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <StackLayout Margin="30,60,0,0">
+                    <Label Text="Trips" FontSize="Title"     FontAttributes="Bold" TextColor="Black"/>
+                    <Label Text="Mountain" FontSize="Title"/>
+                    <Label Text="Mountain hikes give you an incredible sense of freedom along with endurance tests" 
+                           LineBreakMode="WordWrap"
+                           Margin="0,20,0,0" FontSize="Small" TextColor="LightGray" LineHeight="1.4"/>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        
+                    <Frame Margin="0"
+                           Padding="15"
+                           WidthRequest="50"
+                           BackgroundColor="#5c68be"
+                           CornerRadius="15">
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="ImageButton_Clicked"/>
+                        </Frame.GestureRecognizers>
+                        <Image x:Name="arrow" Source="Arrow.png" Margin="5"/>
+                    </Frame>
+                    </Grid>
+
+                </StackLayout>
+            </Grid>
+            <StackLayout Grid.Row="1">
+                <Frame Padding="0" BackgroundColor="#fff" IsClippedToBounds="True" BorderColor="Transparent">
+                    <Image Source="mountainc.png" Aspect="AspectFill"/>
+                </Frame>
+            </StackLayout>
+        </Grid>
+    </ScrollView>
+</ContentPage>
+
+
+
+
+<!--<Label Text="Trips" FontSize="Large" FontAttributes="Bold"/>
+<Label Text="Mountain" FontSize="Large"/>
+<Label Text="Mountain hikes give you an incredible sense of freedom along with endurance tests" Margin="0,20,0,0" FontSize="Small" TextColor="LightGray" LineHeight="1.4"/>
+<Frame BackgroundColor="#4058A0" CornerRadius="10" >
+    <Image Source="Arrow.png" WidthRequest="20" HeightRequest="50"/>
+</Frame>-->

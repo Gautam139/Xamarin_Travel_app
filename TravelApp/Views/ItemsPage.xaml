@@ -1,0 +1,169 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:tabView="clr-namespace:Syncfusion.XForms.TabView;assembly=Syncfusion.SfTabView.XForms"
+             mc:Ignorable="d"
+             Shell.NavBarIsVisible="False"
+             x:Class="TravelApp.Views.ItemsPage"
+             x:Name="BrowseItemsPage">
+             <!--xmlns:sharedTransitions="clr-namespace:Plugin.SharedTransitions;assembly=Plugin.SharedTransitions"-->
+    
+                               
+
+    
+    <Grid>
+        <Image x:Name="ImageMain"
+               IsVisible="False"
+               VerticalOptions="Center"
+               Source="mountainView01.png"
+               Aspect="AspectFill"/>
+        <Grid x:Name="GridMain">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <StackLayout Grid.Row="0"
+                         HorizontalOptions="Center" 
+                         VerticalOptions="Center"
+                         Padding="30,30,30,0">
+                <FlexLayout JustifyContent="SpaceBetween" AlignItems="Center">
+                    <Frame Padding="0" BackgroundColor="Transparent" WidthRequest="25" HeightRequest="25" HorizontalOptions="Center" VerticalOptions="Center">
+                        <Image Source="mainMenu.png">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="showMenu_Tapped"/>
+                            </Image.GestureRecognizers>
+                        </Image>
+                    </Frame>
+                    <Frame Padding="0" BackgroundColor="Transparent" IsClippedToBounds="True" CornerRadius="10">
+                        <Image Source="profilePic.png" WidthRequest="40" HeightRequest="40"/>
+                    </Frame>
+                </FlexLayout>
+                <StackLayout Grid.Row="1" Margin="0,20,0,0">
+                    <Label Text="Discover" FontAttributes="Bold" TextColor="Black" FontSize="Title"/>
+                </StackLayout>
+            </StackLayout>
+            <ScrollView Orientation="Vertical"  Grid.Row="2" Margin="30,0,0,0">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <StackLayout  Grid.Row="1">
+                        <StackLayout>
+                            <tabView:SfTabView BackgroundColor="Transparent" EnableSwiping="False">
+                                <tabView:SfTabView.SelectionIndicatorSettings>
+                                    <tabView:SelectionIndicatorSettings Color="#5c68be " 
+                                                                        Position="Bottom" 
+                                                                        StrokeThickness="3"/>
+                                </tabView:SfTabView.SelectionIndicatorSettings>
+                                <tabView:SfTabItem Title="Places" TitleFontSize="18" tabView:SelectionColor="#3a3a3a" TitleFontColor="LightGray" TitleFontAttributes="Bold">
+                                    <tabView:SfTabItem.Content>
+                                        <Grid x:Name="Places">
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="Auto"/>
+                                            </Grid.RowDefinitions>
+                                            <ScrollView Orientation="Both"  Margin="0,35,0,0" HorizontalScrollBarVisibility="Never">
+                                                <FlexLayout Direction="Row" JustifyContent="SpaceAround">
+                                                    <Frame Margin="0,0,15,0" Padding="0" WidthRequest="175" HeightRequest="275" IsClippedToBounds="True" CornerRadius="20" BackgroundColor="Transparent">
+                                                        <Frame.GestureRecognizers>
+                                                            <TapGestureRecognizer Tapped="detailAbout_Tapped"/>
+                                                        </Frame.GestureRecognizers>
+                                                        <Grid>
+                                                            <Grid.RowDefinitions>
+                                                                <RowDefinition Height="Auto"/>
+                                                            </Grid.RowDefinitions>
+                                                            <Image WidthRequest="100" Source="mountainView01.png" Aspect="Fill"/>
+                                                            <!--<Image WidthRequest="100" sharedTransitions:Transition.Name="dogtransition" Source="mountainView01.png" Aspect="Fill"/>-->
+
+                                                            <FlexLayout Direction="Column" JustifyContent="End" Padding="20">
+                                                                <Label Text="Cascode" TextColor="White" FontSize="Medium"/>
+                                                                <StackLayout Orientation="Horizontal">
+                                                                    <Image Source="finder.png" WidthRequest="20" HeightRequest="20"/>
+                                                                    <Label Text="Cascode, Brazil" TextColor="White" FontSize="Small"/>
+                                                                </StackLayout>
+                                                            </FlexLayout>
+                                                        </Grid>
+                                                    </Frame>
+                                                    <Frame Margin="0,0,15,0" Padding="0" WidthRequest="175" HeightRequest="275" IsClippedToBounds="True" CornerRadius="20" BackgroundColor="Transparent">
+                                                        <Grid>
+                                                            <Grid.RowDefinitions>
+                                                                <RowDefinition Height="Auto"/>
+                                                            </Grid.RowDefinitions>
+                                                            <Image WidthRequest="100" Source="mountainView02.png" Aspect="Fill"/>
+                                                            <FlexLayout Direction="Column" JustifyContent="End" Padding="20">
+                                                                <Label Text="Yosemite" TextColor="White" FontSize="Medium"/>
+                                                                <StackLayout Orientation="Horizontal">
+                                                                    <Image Source="finder.png" WidthRequest="20" HeightRequest="20"/>
+                                                                    <Label Text="USA, California" TextColor="White" FontSize="Small"/>
+                                                                </StackLayout>
+                                                            </FlexLayout>
+                                                        </Grid>
+                                                    </Frame>
+                                                    <Frame Margin="0,0,15,0" Padding="0" WidthRequest="175" HeightRequest="275" IsClippedToBounds="True" CornerRadius="20" BackgroundColor="Transparent">
+                                                        <Grid>
+                                                            <Grid.RowDefinitions>
+                                                                <RowDefinition Height="Auto"/>
+                                                            </Grid.RowDefinitions>
+                                                            <Image WidthRequest="100" Source="mountainView.png" Aspect="Fill"/>
+                                                            <FlexLayout Direction="Column" JustifyContent="End" Padding="20">
+                                                                <Label Text="Yosinaga" TextColor="White" FontSize="Medium"/>
+                                                                <StackLayout Orientation="Horizontal">
+                                                                    <Image Source="finder.png" WidthRequest="20" HeightRequest="20"/>
+                                                                    <Label Text="Tokyo, Japan" TextColor="White" FontSize="Small"/>
+                                                                </StackLayout>
+                                                            </FlexLayout>
+                                                        </Grid>
+                                                    </Frame>
+                                                </FlexLayout>
+                                            </ScrollView>
+                                            <FlexLayout Grid.Row="1" JustifyContent="SpaceBetween" Margin="0,20,30,0">
+                                                <Label Text="Explore More" TextColor="Black" FontAttributes="Bold" FontSize="Medium"/>
+                                                <Label Text="See all" TextColor="#5c68be" FontAttributes="Bold" FontSize="Medium"/>
+                                            </FlexLayout>
+                                        </Grid>
+                                    </tabView:SfTabItem.Content>
+                                </tabView:SfTabItem>
+                                <tabView:SfTabItem Title="Inspiration" TitleFontSize="18" tabView:SelectionColor="#3a3a3a" TitleFontColor="LightGray" TitleFontAttributes="Bold">
+
+                                </tabView:SfTabItem>
+                                <tabView:SfTabItem Title="Emotions" TitleFontSize="18" tabView:SelectionColor="#3a3a3a" TitleFontColor="LightGray" TitleFontAttributes="Bold">
+
+                                </tabView:SfTabItem>
+                            </tabView:SfTabView>
+                        </StackLayout> 
+                        <FlexLayout Grid.Row="2" Margin="0,10,30,0" JustifyContent="SpaceBetween">
+                            <StackLayout>
+                                <Frame WidthRequest="30" HeightRequest="30" BackgroundColor="#E7EDF1" IsClippedToBounds="True" CornerRadius="15" Padding="15">
+                                    <Image Source="canoe.png"/>
+                                </Frame>
+                                <Label Text="Kayaking" TextColor="Gray" FontSize="Small"/>
+                            </StackLayout>
+                            <StackLayout>
+                                <Frame BackgroundColor="#f9e9ca" WidthRequest="30" HeightRequest="30" IsClippedToBounds="True" CornerRadius="15" Padding="15">
+                                    <Image Source="snorkel.png"/>
+                                </Frame>
+                                <Label Text="snorkeling" TextColor="Gray" FontSize="Small"/>
+                            </StackLayout>
+                            <StackLayout>
+                                <Frame BackgroundColor="#e7deef" WidthRequest="30" HeightRequest="30" IsClippedToBounds="True" CornerRadius="15" Padding="15">
+                                    <Image Source="Balloon.png"/>
+                                </Frame>
+                                <Label Text="Balloning" TextColor="Gray" FontSize="Small"/>
+                            </StackLayout>
+                            <StackLayout>
+                                <Frame BackgroundColor="#d7f2f2" WidthRequest="30" HeightRequest="30" IsClippedToBounds="True" CornerRadius="15" Padding="15">
+                                    <Image Source="mountainicon.png"/>
+                                </Frame>
+                                <Label Text="Hiking" TextColor="Gray" FontSize="Small" HorizontalTextAlignment="Center"/>
+                            </StackLayout>
+                        </FlexLayout>
+                    </StackLayout>
+                    </Grid>
+                </ScrollView>
+            </Grid>
+    </Grid>
+</ContentPage>

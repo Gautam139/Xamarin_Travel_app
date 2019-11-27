@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:border="clr-namespace:Syncfusion.XForms.Border;assembly=Syncfusion.Core.XForms"
+             mc:Ignorable="d"
+             Shell.NavBarIsVisible="False"
+             x:Name="detailsPage"
+             x:Class="TravelApp.Views.NewItemPage">
+
+             <!--xmlns:sharedTransitions="clr-namespace:Plugin.SharedTransitions;assembly=Plugin.SharedTransitions"-->
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <StackLayout Grid.Row="0">
+            <Image x:Name="headerImage" Source="mountainView01.png" Aspect="AspectFill"/>
+            <!--<Image x:Name="headerImage" sharedTransitions:Transition.Name="dogtransition" Source="mountainView01.png" Aspect="AspectFill"/>-->
+
+        </StackLayout>
+        <FlexLayout Grid.Row="0" JustifyContent="SpaceBetween" AlignItems="Start" Margin="30">
+            <Frame Padding="0" BackgroundColor="Transparent" WidthRequest="25" HeightRequest="25">
+                <Image Source="mainMenu.png">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="showMenu_Tapped"/>
+                    </Image.GestureRecognizers>
+                </Image>
+            </Frame>
+            <Frame Padding="0" BackgroundColor="Transparent" IsClippedToBounds="True" CornerRadius="10">
+                <Image Source="profilePic.png" WidthRequest="40" HeightRequest="40"/>
+            </Frame>
+        </FlexLayout>
+        <StackLayout Grid.Row="1" HeightRequest="400" x:Name="content_wrapper">
+            <border:SfBorder x:Name="border" BackgroundColor="White" BorderColor="Transparent" CornerRadius="45,45,0,0">
+                <ScrollView >
+                    <StackLayout>
+                        <StackLayout Padding="30,30,30,0">
+                            <FlexLayout Direction="Row" JustifyContent="SpaceBetween" >
+                                <Label Text="Casecade" FontAttributes="Bold" TextColor="#333" FontSize="Large"/>
+                                <Label Text="$ 250"  FontAttributes="Bold" FontSize="Large" TextColor="#5c68be"/>
+                            </FlexLayout>
+                            <StackLayout Orientation="Horizontal">
+                                <Image Source="finderBlue.png" HeightRequest="20" />
+                                <Label Text="Canada, Banff" TextColor="#5c68be"/>
+                            </StackLayout>
+                            <StackLayout Orientation="Horizontal" VerticalOptions="Center">
+                                <Image Source="star.png" WidthRequest="15"/>
+                                <Image Source="star.png" WidthRequest="15"/>
+                                <Image Source="star.png" WidthRequest="15"/>
+                                <Image Source="star.png" WidthRequest="15"/>
+                                <Image Source="starOutline.png" WidthRequest="15"/>
+                                <Label Text="(4.0)" TextColor="LightGray" FontSize="Small" VerticalTextAlignment="Center"/>
+                            </StackLayout>
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+                                <StackLayout Grid.Row="0" Margin="0,25,0,25">
+                                    <Label Text="People" FontAttributes="Bold" FontSize="Medium" TextColor="#333"/>
+                                    <Label Text="Number of people in your group" FontSize="Small" TextColor="LightGray"/>
+                                    <FlexLayout Margin="0,10,0,0">
+                                        <Frame Margin="0,0,15,0"  WidthRequest="55" HeightRequest="55" IsClippedToBounds="True" CornerRadius="15"  Padding="0" BackgroundColor="#333" >
+                                            <Label Text="1" TextColor="White" FontSize="Medium" HorizontalOptions="Center" VerticalOptions="Center"/>
+                                        </Frame>
+                                        <Frame Margin="0,0,15,0"  WidthRequest="55" HeightRequest="55" IsClippedToBounds="True" CornerRadius="15"  Padding="0" BackgroundColor="#E7EDF1" >
+                                            <Label Text="2" FontSize="Medium" FontAttributes="Bold"  HorizontalOptions="Center" VerticalOptions="Center"/>
+                                        </Frame>
+                                        <Frame Margin="0,0,15,0" WidthRequest="55" HeightRequest="55" IsClippedToBounds="True" CornerRadius="15"  Padding="0" BackgroundColor="#E7EDF1" >
+                                            <Label Text="3" FontSize="Medium" FontAttributes="Bold" HorizontalOptions="Center" VerticalOptions="Center"/>
+                                        </Frame>
+                                        <Frame Margin="0,0,15,0" WidthRequest="55" HeightRequest="55" IsClippedToBounds="True" CornerRadius="15"  Padding="0" BackgroundColor="#E7EDF1" >
+                                            <Label Text="4" FontSize="Medium" FontAttributes="Bold" HorizontalOptions="Center" VerticalOptions="Center"/>
+                                        </Frame>
+                                        <Frame WidthRequest="55" HeightRequest="55" IsClippedToBounds="True" CornerRadius="15"  Padding="0" BackgroundColor="#E7EDF1" >
+                                            <Label Text="5" FontSize="Medium" FontAttributes="Bold" HorizontalOptions="Center" VerticalOptions="Center"/>
+                                        </Frame>
+                                    </FlexLayout>
+                                </StackLayout>
+                                <StackLayout Grid.Row="1">
+                                    <Label Text="Description" TextColor="#333" FontSize="Large" FontAttributes="Bold"/>
+                                    <Label Text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,"/>
+                                </StackLayout>
+                                <Grid Grid.Row="2" Margin="0,20,0,20">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+
+                                    <Frame Grid.Column="0" Padding="10" BorderColor="#5c68be" CornerRadius="10" HeightRequest="40" WidthRequest="40" Margin="0,0,10,0">
+                                        <Image x:Name="heartIcon" Source="heart.png" WidthRequest="20" Margin="8"/>
+                                    </Frame>
+                                    <Frame Grid.Column="1" HeightRequest="40"  BackgroundColor="#5c68be" Padding="10" CornerRadius="10">
+                                        <FlexLayout JustifyContent="SpaceAround" AlignItems="Center">
+                                            <Label Text="Book Trip Now" TextColor="White" FontSize="Subtitle"/>
+                                            <Image x:Name="arrow" Source="Arrow.png" HeightRequest="20"/>
+                                        </FlexLayout>
+                                    </Frame>
+                                </Grid>
+                            </Grid>
+                        </StackLayout>
+                    </StackLayout>
+                </ScrollView>
+            </border:SfBorder>
+        </StackLayout>
+    </Grid>
+</ContentPage>
